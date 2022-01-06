@@ -647,22 +647,21 @@ textarea {
 
 /* Navigation
 --------------------------------------------- */
-.site-branding {
-	max-width:35%;
-	max-height:35%;
-	display:block;
-	padding-top: 15px;
+
+**/*my changes*/
+
+
+.test{
+
+   padding: 0;
+   margin: 1em;
+   list-style-type: none;
+   display: inline-block;
+   text-decoration: none;
+   color:red;
 }
 
-
-
-.menu ul {
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-
-.menu ul li a {
+.menu ul li  {
 	text-decoration: none;
 }
 
