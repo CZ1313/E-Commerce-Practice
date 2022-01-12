@@ -485,20 +485,30 @@ hr {
 ul,
 ol {
 	margin: 0 0 1.5em 3em;
+	display:inline-flex;
+	text-align:center;
+	
 }
 
 ul {
-	list-style: disc;
+	list-style: none;
+}
+
+ul >li >a {
+	text-decoration: none;
+ 	padding:20px;
 }
 
 ol {
 	list-style: decimal;
+
 }
 
 li > ul,
 li > ol {
 	margin-bottom: 0;
 	margin-left: 1.5em;
+
 }
 
 dt {
@@ -533,17 +543,18 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: rgb(161, 94, 5);
+	font-weight:bold;
 }
 
 a:visited {
-	color: #800080;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #191970;
+	color: #000000;
+	background-color: #78cf05;
 }
 
 a:focus {

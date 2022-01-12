@@ -17,7 +17,7 @@
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
   		<div class="container">
-  			<div class="navbar-brand test"  >
+  			<div class="navbar-brand"  >
       			<?php the_custom_logo();?>
 			</div>
 
@@ -27,13 +27,11 @@
       		<span class="navbar-toggler-icon"></span>
     		</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
-				<div class="">
+				<div class="ms-auto">
 				<?php
 					wp_nav_menu(
 						array(
-								'theme_location' => 'menu-1',
-								'menu_id'        => 'primary-menu',
-								'menu_class'	 => 'test',
+								'theme_location' => 'headerLocation',
 							)
 						);
 						?>

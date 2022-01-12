@@ -49,11 +49,8 @@ if ( ! function_exists( 'e_commerce_practice_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus(
-			array(
-				'menu-1' => esc_html__( 'Primary', 'e-commerce-practice' ),
-			)
-		);
+		register_nav_menu('headerLocation', 'Header Location');
+		register_nav_menu('footerLocation', 'Footer Location');
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -141,6 +138,8 @@ add_action( 'widgets_init', 'e_commerce_practice_widgets_init' );
  * Enqueue scripts and styles.
  */
 function e_commerce_practice_scripts() {
+
+	wp_enqueue_style('custom-style', get_theme_file_uri('/E-Commerce-Practice/style.css'));
 	wp_enqueue_style('bootstrap_stylesheet', get_theme_file_uri('/css/bootstrap.min.css'));
 	wp_enqueue_style( 'e-commerce-practice-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'e-commerce-practice-style', 'rtl', 'replace' );
